@@ -2,7 +2,7 @@
 
 @section('content')
 
-    <div class="container mb-4 countries-home" id="top">
+    <div class="container mb-5 countries-home" id="top">
 
         {{-- Success Message for Favorites toggle --}}
         <success-alert
@@ -10,7 +10,7 @@
             :timeout="2000">
         </success-alert>
 
-        <h1 class="my-4 text-center">Country Encyclopedia</h1>
+        <h1 class="my-5 text-center">Country Encyclopedia</h1>
 
         <div class="row mb-4">
             <div class="col-12 col-md-6">
@@ -83,8 +83,13 @@
             </div>
         </div>
 
-        {{-- Return to Top Button --}}
-        <a class="btn btn-primary" href="#top">Return to Top</a>
+        {{-- Return to Top Button, conditionally if the request doesn't have a query --}}
+        @if (!request()->has('query'))
+            <a class="btn btn-primary" href="#top">Return to Top</a>
+        @else
+            {{-- Back Button --}}
+            <a href="{{ route('home') }}" class="btn btn-primary my-4">Back to All Countries</a>
+        @endif
 
     </div>
 

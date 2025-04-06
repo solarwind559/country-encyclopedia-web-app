@@ -69,9 +69,7 @@
         </div>
 
         {{-- Back Button --}}
-        <div class="my-4">
-            <a href="{{ route('home') }}" class="btn btn-primary">Back</a>
-        </div>
+        <a href="{{ route('home') }}" class="btn btn-primary my-4">Back to All Countries</a>
 
     </div>
 @endsection

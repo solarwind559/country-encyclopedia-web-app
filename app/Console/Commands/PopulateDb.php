@@ -28,15 +28,15 @@ class PopulateDb extends Command
     public function handle()
     {
         try {
-            // Fetch data from API with timeout and retry logic
-            $response = Http::timeout(60) // Set timeout to 30 seconds
+            // Fetch data from API
+            $response = Http::timeout(60)
                             ->retry(3, 500) // Retry up to 3 times with 500ms delay
                             ->get('https://restcountries.com/v3.1/all');
 
             if ($response->ok()) {
                 $countries = $response->json();
 
-                // Sort countries by population
+                // Sorting countries by population
                 $sortedCountries = collect($countries)->sortByDesc('population')->values();
                 foreach ($sortedCountries as $rank => $country) {
                     Country::updateOrCreate(
