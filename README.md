@@ -6,7 +6,6 @@ Open the terminal and navigate to a folder where you want to save this project.
 Run this command to clone the repository:
 ```
 git clone https://github.com/solarwind559/country-encyclopedia-web-app.git
-
 ```
 
 Navigate to the project directory and run commands:
@@ -35,7 +34,7 @@ php artisan app:populate-db
 
 ### Checklist:
 
-+ command ``` php artisan app:populate-db``` populates the database from the https://restcountries.com/v3.1/all API
++ Command ``` php artisan app:populate-db``` populates the database from the https://restcountries.com/v3.1/all API
 + Homepage contains a Searchbox and a list of Favorites
 + Country details include: 
    + Common name.
