@@ -8,15 +8,13 @@
     @if ($countries->isNotEmpty())
         <ul class="list-group">
             @foreach ($countries as $country)
-                <li class="list-group-item">
+                <li class="languages-wrap list-group-item">
                     <a href="{{ route('countries.show', $country->id) }}">
                         {{ $country->name }}
                     </a>
                 </li>
             @endforeach
         </ul>
-    @else
-        <p class="text-muted">No countries found that speak this language.</p>
     @endif
 
     {{-- Back Button --}}

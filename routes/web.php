@@ -3,10 +3,6 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CountryController;
 
-Route::get('/test', function () {
-    return view('test');
-});
-
 Route::get('/', [CountryController::class, 'index'])->name('home');
 Route::get('/search', [CountryController::class, 'search'])->name('countries.search');
 Route::get('/favorites', [CountryController::class, 'showFavorites'])->name('countries.showfavorites');

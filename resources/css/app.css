@@ -15,7 +15,6 @@ input.form-control {
     background-color: #ededed;
 }
 .form-control{
-    /* max-width: 200px; */
     margin-right: 5px;
 }
 
@@ -29,7 +28,9 @@ a {
     max-height: 100px;
 }
 
-.countries-wrap.list-group-item:hover {
+.countries-wrap.list-group-item:hover,
+.favorites-wrap.list-group-item:hover,
+.languages-wrap.list-group-item:hover {
     background-color: #ededed;
 }
 
@@ -51,9 +52,4 @@ a {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* transition: ease-in-out 0.3s all; */
-}
-
-.active-icon {
-    border: red 1px solid;
 }

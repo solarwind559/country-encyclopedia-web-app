@@ -61,7 +61,7 @@
                     <h3 class="mt-3 mt-md-1 mb-3">Your Favorites</h3>
                     <ul class="p-0 list-group">
                         @forelse ($favorites as $favorite)
-                            <li class="list-group-item d-flex justify-content-between align-items-center">
+                            <li class="favorites-wrap list-group-item d-flex justify-content-between align-items-center">
                                 <a class="" href="/countries/{{ $favorite->id }}">{{ $favorite->name }}</a>
 
                                 {{-- Remove from Favorites Button --}}
